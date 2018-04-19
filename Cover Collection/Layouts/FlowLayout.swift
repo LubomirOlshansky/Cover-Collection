@@ -1,5 +1,5 @@
 //
-//  CollectionViewCell.swift
+//  FlowLayout.swift
 //  Cover Collection
 //
 //  Created by Lubomir Olshansky on 19/04/2018.
@@ -8,7 +8,9 @@
 
 import UIKit
 
-class CollectionViewCell: UICollectionViewCell {
-    
-    @IBOutlet weak var textLabel: UILabel!
+class FlowLayout: UICollectionViewFlowLayout {
+
+    override func prepare() {
+        super.prepare()
+    }
 }

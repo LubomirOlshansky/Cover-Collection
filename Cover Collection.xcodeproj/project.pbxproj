@@ -8,22 +8,24 @@
 
 /* Begin PBXBuildFile section */
 		8D9467202086483F003E68F0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D94671F2086483F003E68F0 /* AppDelegate.swift */; };
-		8D9467222086483F003E68F0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D9467212086483F003E68F0 /* ViewController.swift */; };
+		8D9467222086483F003E68F0 /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D9467212086483F003E68F0 /* CollectionViewController.swift */; };
 		8D9467252086483F003E68F0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D9467232086483F003E68F0 /* Main.storyboard */; };
 		8D9467272086483F003E68F0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8D9467262086483F003E68F0 /* Assets.xcassets */; };
 		8D94672A2086483F003E68F0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D9467282086483F003E68F0 /* LaunchScreen.storyboard */; };
 		8D9467352088C335003E68F0 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D9467342088C335003E68F0 /* CollectionViewCell.swift */; };
+		8D94673A2088CE39003E68F0 /* FlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D9467392088CE39003E68F0 /* FlowLayout.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		8D94671C2086483F003E68F0 /* Cover Collection.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Cover Collection.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D94671F2086483F003E68F0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		8D9467212086483F003E68F0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		8D9467212086483F003E68F0 /* CollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
 		8D9467242086483F003E68F0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8D9467262086483F003E68F0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8D9467292086483F003E68F0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8D94672B2086483F003E68F0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8D9467342088C335003E68F0 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
+		8D9467392088CE39003E68F0 /* FlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowLayout.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +72,7 @@
 		8D9467312088BEAD003E68F0 /* Layouts */ = {
 			isa = PBXGroup;
 			children = (
+				8D9467392088CE39003E68F0 /* FlowLayout.swift */,
 			);
 			path = Layouts;
 			sourceTree = "<group>";
@@ -85,7 +88,7 @@
 		8D9467332088BEC0003E68F0 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				8D9467212086483F003E68F0 /* ViewController.swift */,
+				8D9467212086483F003E68F0 /* CollectionViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -171,7 +174,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8D9467222086483F003E68F0 /* ViewController.swift in Sources */,
+				8D9467222086483F003E68F0 /* CollectionViewController.swift in Sources */,
+				8D94673A2088CE39003E68F0 /* FlowLayout.swift in Sources */,
 				8D9467202086483F003E68F0 /* AppDelegate.swift in Sources */,
 				8D9467352088C335003E68F0 /* CollectionViewCell.swift in Sources */,
 			);
