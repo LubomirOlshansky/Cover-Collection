@@ -10,9 +10,7 @@ import UIKit
 
 class FlowLayout: UICollectionViewFlowLayout {
 
-//    let standardItemAlpha: CGFloat = 0
-    let standardItemScale: CGFloat = 0.5
-    
+    let standardItemScale: CGFloat = 0.8
     override func layoutAttributesForElements(in rect: CGRect) -> [UICollectionViewLayoutAttributes]? {
         let attributes = super.layoutAttributesForElements(in: rect)
         var attributesCopy = [UICollectionViewLayoutAttributes]()
@@ -24,12 +22,21 @@ class FlowLayout: UICollectionViewFlowLayout {
             attributesCopy.append(itemAttributesCopy)
         }
         
-        
         return attributesCopy
     }
     
     override open func shouldInvalidateLayout(forBoundsChange newBounds: CGRect) -> Bool {
         return true
+    }
+    
+    override func targetContentOffset(forProposedContentOffset proposedContentOffset: CGPoint) -> CGPoint {
+
+         let collectionViewSize = self.collectionView!.bounds.size
+        let proposedContentOffsetCenterX = proposedContentOffset.x + collectionViewSize.width * 0.5
+        let insetX = ((collectionView?.bounds.width)! - 300) / 2.0
+        let insetY = ((collectionView?.bounds.height)! - 300) / 2.0
+        collectionView?.contentInset = UIEdgeInsets(top: insetY, left: insetX, bottom: insetY, right: insetX)
+        return CGPoint(x: proposedContentOffsetCenterX, y: proposedContentOffset.y)
     }
     
     func changeLayoutAttributes(_ attributes: UICollectionViewLayoutAttributes) {
@@ -41,24 +48,8 @@ class FlowLayout: UICollectionViewFlowLayout {
         let distance = min(abs(collectionCenter - normalizedCenter), maxDistance)
         
         let ratio = (maxDistance - distance)/maxDistance
-//        let alpha = ratio * (1 - self.standardItemAlpha) + self.standardItemAlpha
         let scale = ratio * (1 - self.standardItemScale) + self.standardItemScale
         
-//        attributes.alpha = alpha
         attributes.transform3D = CATransform3DScale(CATransform3DIdentity, scale, scale, 1)
     }
-//    override func targetContentOffset(forProposedContentOffset proposedContentOffset: CGPoint, withScrollingVelocity velocity: CGPoint) -> CGPoint {
-//        
-//        let layoutAttributes = self.layoutAttributesForElements(in: collectionView!.bounds)
-//        
-//        let center = collectionView!.bounds.size.width / 2
-//        let proposedContentOffsetCenterOrigin = proposedContentOffset.y + center
-//        
-//        let closest = layoutAttributes!.sorted { abs($0.center.y - proposedContentOffsetCenterOrigin) < abs($1.center.y - proposedContentOffsetCenterOrigin) }.first ?? UICollectionViewLayoutAttributes()
-//        
-//        let targetContentOffset = CGPoint(x: proposedContentOffset.x, y: floor(closest.center.y - center))
-//        
-//        return targetContentOffset
-//    }
-
 }

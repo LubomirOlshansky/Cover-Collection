@@ -31,10 +31,6 @@
                                     <rect key="frame" x="0.0" y="0.0" width="251" height="251"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mle-g1-27z">
-                                            <rect key="frame" x="0.0" y="0.0" width="251" height="251"/>
-                                            <color key="backgroundColor" red="0.52542384210000004" green="0.96429308690000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        </view>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PnI-bb-29t">
                                             <rect key="frame" x="104" y="115" width="42" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -43,14 +39,10 @@
                                         </label>
                                     </subviews>
                                 </view>
-                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.47729688002664894" green="0.54926616009946705" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstItem="PnI-bb-29t" firstAttribute="centerY" secondItem="E9n-XL-y7U" secondAttribute="centerY" id="69f-bg-as8"/>
-                                    <constraint firstAttribute="bottom" secondItem="Mle-g1-27z" secondAttribute="bottom" id="6Uw-jB-ENZ"/>
-                                    <constraint firstItem="Mle-g1-27z" firstAttribute="top" secondItem="E9n-XL-y7U" secondAttribute="top" id="QTu-dO-tzf"/>
-                                    <constraint firstAttribute="trailing" secondItem="Mle-g1-27z" secondAttribute="trailing" id="Uhl-Am-pab"/>
                                     <constraint firstItem="PnI-bb-29t" firstAttribute="centerX" secondItem="E9n-XL-y7U" secondAttribute="centerX" id="ZJB-6T-RRl"/>
-                                    <constraint firstItem="Mle-g1-27z" firstAttribute="leading" secondItem="E9n-XL-y7U" secondAttribute="leading" id="giZ-Yd-nbQ"/>
                                 </constraints>
                                 <connections>
                                     <outlet property="textLabel" destination="PnI-bb-29t" id="CD4-4R-j2r"/>
